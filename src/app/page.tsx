@@ -1,12 +1,4 @@
-// import Image from "next/image";
-
-// export default function Home() {
-//   return (
-//     <main>
-//       sanke
-//     </main>
-//   );
-// }
+//main routing logic is here
 import { getServerSession } from 'next-auth';
 import { redirect } from 'next/navigation';
 import { authOptions } from './api/auth/[...nextauth]/route';
