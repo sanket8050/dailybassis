@@ -1,4 +1,6 @@
 import { PrismaClient } from '@prisma/client';
+
+//import prisma
 //post request to set is regular or not
 const prisma = new PrismaClient();
 
