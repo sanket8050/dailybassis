@@ -1,10 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -15,23 +8,23 @@ datasource db {
 }
 
 model User {
-  id           Int         @id @default(autoincrement())
-  name         String
-  email        String   @unique
-  password     String   // hashed
-  role         Role     @default(USER)
-  attending    Boolean  @default(false)
-  isRegular    Boolean  @default(false)
-  lastUpdate   DateTime @default(now())
+  id         String   @id
+  name       String
+  email      String   @unique
+  password   String
+  role       Role     @default(USER)
+  attending  Boolean  @default(false)
+  isRegular  Boolean  @default(false)
+  lastUpdate DateTime @default(now())
+}
+
+model Meal {
+  date        DateTime @unique
+  description String?
+  id          String   @id
 }
 
 enum Role {
   USER
   ADMIN
-}
-
-model Meal {
-  id           Int      @id @default(autoincrement())
-  date         DateTime @unique // one per day
-  description  String?  // optional
 }
