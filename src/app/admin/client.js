@@ -22,9 +22,9 @@ export default function AdminClient({ users, meal, adminName }) {
   const regularCount = users.filter((u) => u.isRegular).length;
 
   return (
-    <div className="flex flex-col items-center min-h-screen p-8 bg-gray-50">
-      <Card className="w-full max-w-3xl shadow-md border border-gray-200">
-        <CardHeader className="flex justify-between items-center bg-white rounded-t-xl border-b">
+    <div className="flex flex-col items-center min-h-screen p-8 bg-green-500">
+      <Card className="w-full max-w-3xl shadow-md border border-gray-500">
+        <CardHeader className="flex justify-between items-center bg-blue- rounded-t-xl border-b">
           <CardTitle className="text-2xl font-bold">
             Welcome, {adminName} 👋
           </CardTitle>
