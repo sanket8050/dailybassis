@@ -15,5 +15,7 @@ export async function setMealDescription(formData) {
     create: { date: today, description },
   });
 
-  redirect('/admin');
+  redirect('/admin') ;
 }
+
+//this is admin db update 
