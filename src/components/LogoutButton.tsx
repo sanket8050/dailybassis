@@ -1,4 +1,5 @@
 'use client';
+//use this button in org too
 //reusable button 
 
 import { signOut } from 'next-auth/react';
