@@ -8,6 +8,7 @@ export default async function AppLandingPage() {
   const today = startOfDay(new Date());
   const meal = await prisma.meal.findFirst({ where: { date: { gte: today, lt: new Date(today.getTime() + 24 * 60 * 60 * 1000) } } });
 
+
   return (
     <main className="min-h-screen bg-gradient-to-br from-indigo-50 via-sky-50 to-white">
       <nav className="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
